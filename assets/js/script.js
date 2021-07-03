@@ -59,9 +59,28 @@ var getWeatherData = function(enteredCity){
 var showWeather = function(weather, cityToLookFor){
     currentWeatherHolderEl.textContent= "";
     lookUpCityFormEl.textContent=cityToLookFor;
-
+    // Icons //
     var statusIcon = document.createElement("img")
-    statusIcon.setAttribute("src", `https://openweathermap.org/img/wn/${dailyForecast.weather[0].icon}@2x.png`);
+    statusIcon.setAttribute("src", `https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`);
+    lookedUpCityEl.appendChild(statusIcon);
+    // Temperature Span //
+    var temperatureData = document.createElement("span");
+    temperatureData.textContent = "temperature: " + weather.main.temp + "°F";
+    temperatureData.classList = "weatherItems"
+    // Date //
+    var dateOnCalander = document.createElement("span")
+    dateOnCalander.textContent=" (" + moment(weather.dt.value).format("MMM D, YYYY") + ") ";
+    lookedUpCityEl.appendChild(dateOnCalander);
+    // Wind Span //
+    var windMPH = document.createElement("span");
+    windMPH.textContent = "Speed of Wind:" + weather.wind.speed + "MPH";
+    windMPH.classList = "weatherItems"
+    // Humidity Span //
+    var howHumid = document.createElement("span");
+    howHumid.textContent = "Humidity:" + weather.main.humidity + " %";
+    // connecting to their containers //
+    
+
 
 }
 

@@ -25,13 +25,6 @@ var fiveDayWeatherHolderEl=document.querySelector("#fiveDayWeatherHolder");
 var recentlyViewedEl=document.querySelector("#recentlyViewed");
 
 
-
-
-
-
-
-
-
 var handlesSubmit = function(event){
     event.preventDefault();
     var enteredCity = enteredCityEl.value.trim();
@@ -63,6 +56,14 @@ var getWeatherData = function(enteredCity){
    
 };
 
+var showWeather = function(weather, cityToLookFor){
+    currentWeatherHolderEl.textContent= "";
+    lookUpCityFormEl.textContent=cityToLookFor;
+
+    var statusIcon = document.createElement("img")
+    statusIcon.setAttribute("src", `https://openweathermap.org/img/wn/${dailyForecast.weather[0].icon}@2x.png`);
+
+}
 
 
 
@@ -134,7 +135,6 @@ var getWeatherData = function(enteredCity){
 //     console.log(dateValue)
 //     console.log(dateForHumanEyes)
 //     console.log(actualDayForHumans)
-}
 
 // fetch('api.openweathermap.org/data/2.5/weather?q='+inputValue.value+'&appid=cbc3e876c3052d94c4bb2fd2f431468b')
 //     .then (response => response.json())

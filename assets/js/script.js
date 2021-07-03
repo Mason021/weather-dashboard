@@ -14,6 +14,16 @@
 // WHEN I click on a city in the search history
 // THEN I am again presented with current and future conditions for that city
 
+
+
+
+
+
+
+
+
+
+
 var button = document.querySelector(".button")
 var inputValue = document.querySelector(".inputValue")
 var name = document.querySelector(".name");
@@ -21,8 +31,7 @@ var desc = document.querySelector(".desc");
 var temp = document.querySelector(".temp");
 var humidity = document.querySelector(".humidity");
 var windSpeed = document.querySelector(".windSpeed");
-// var name = document.querySelector(".name");
-// var name = document.querySelector(".name");
+
 
 button.addEventListener("click", function(){
     fetch('https://api.openweathermap.org/data/2.5/weather?q='+inputValue.value+'&appid=cbc3e876c3052d94c4bb2fd2f431468b')

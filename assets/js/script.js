@@ -22,34 +22,41 @@
 
 
 
-
+var keyOfAPI = 'cbc3e876c3052d94c4bb2fd2f431468b'
 
 var button = document.querySelector(".button")
 var inputValue = document.querySelector(".inputValue")
-var name = document.querySelector(".name");
-var desc = document.querySelector(".desc");
-var temp = document.querySelector(".temp");
-var humidity = document.querySelector(".humidity");
-var windSpeed = document.querySelector(".windSpeed");
+// var name = document.querySelector(".name");
+// var desc = document.querySelector(".desc");
+// var temp = document.querySelector(".temp");
+// var humidity = document.querySelector(".humidity");
+// var windSpeed = document.querySelector(".windSpeed");
+
+// other API with 5 day forcast //
+// function pullUpForecast(){fetch('https://api.openweathermap.org/data/2.5/forecast?q='+inputValue.value+'&appid='+keyOfAPI+'&units=imperial')
+// .then(response => response.json())
+// .then(data => console.log(data))
+// }
+
 
 
 button.addEventListener("click", function(){
-    fetch('https://api.openweathermap.org/data/2.5/weather?q='+inputValue.value+'&appid=cbc3e876c3052d94c4bb2fd2f431468b')
+    fetch('https://api.openweathermap.org/data/2.5/weather?q='+inputValue.value+'&appid='+keyOfAPI+'&units=imperial')
     .then(response => response.json())
-    // .then(data => console.log(data))
-    .then(data => {
-        var nameValue = data["name"];
-        var tempValue = data["main"]["temp"]
-        var descValue = data["weather"][0]["description"]
-        var humidValue = data["main"]["humidity"]
-        var windSpeedValue = data["wind"]["speed"];
+    .then(data => console.log(data))
+    // .then(data => {
+    //     var nameValue = data["name"];
+    //     var tempValue = data["main"]["temp"]
+    //     var descValue = data["weather"][0]["description"]
+    //     var humidValue = data["main"]["humidity"]
+    //     var windSpeedValue = data["wind"]["speed"];
 
-        name.innerHTML = nameValue;
-        temp.innerHTML = tempValue;
-        desc.innerHTML = descValue;
-        humidity.innerHTML = humidValue;
-        windSpeed.innerHTML = windSpeedValue;
-    })
+    //     name.innerHTML = nameValue;
+    //     temp.innerHTML = tempValue;
+    //     desc.innerHTML = descValue;
+    //     humidity.innerHTML = humidValue;
+    //     windSpeed.innerHTML = windSpeedValue;
+    // })
 
 .catch(err => alert("Something is off here, please try again")) 
 })

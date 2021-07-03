@@ -12,53 +12,41 @@
     <title>Weather OnDemand</title>
 </head>
 <body>
-    <div class="conatiner-fluid">
-        <div class="card">
-            <h1>Weather OnDemand</h1>
-        </div>
-    </div>
-
-    <div class="container">
+    <header class = "bg-dark text-white text-center p-2">
+        <h1>Weather OnDemand</h1>
+    </header>
+    <main class="conatiner-fluid">
         <div class="row">
-            <div class="col">
-                <div class="card-body text-center">
-                    <div class="card" style="width: 18rem;">
-                        <div class="card-body bg-light">
-                            <h6 class="card-subtitle mb-2 text-muted">Enter a city</h6>
-                            <div class="input-group mb-3">
+            <div class="col-12 col-md-3 p-2 search-column">
+                <form class = "border p-2" id = "lookUpCityform">
+                    <h4>Enter a city</h4>
+                    <input id="enteredCity" type = "text" autofocus = "true" class = "form-input"/>
+                    <button class = "btn btn-primary" type = "submit">Enter a city</button>
+                </form>
+                <div class="past-search border" id= "recentlyViewed"></div>
+            </div>
+            <div class="col-12 col-md-9">
+                <div class="row border selected-city">
+                    <div class= "col-12">
+                        <h2 id="lookedUpCity"></h2>
+                        <div id="currentWeatherHolder" class = "list-group"></div>
+                    </div>
+                </div>
+                <div class = "row border" id= "five-day-forecast">
+                    <h2 class= "col-12" id= "upcomingWeather"></h2>
+                    <div class= "d-flex" id= "fiveDayWeatherHolder"></div>
+                </div>
+            </div>
+        </main>
+                    
+                                <!--  this could be another way to do the search button with icon (come back to)
                                 <input type="text" class="form-control inputValue" placeholder="Enter city here"
                                     aria-label="Recipient's username" aria-describedby="button-addon2">
                                 <div class="input-group-append">
                                     <button class="btn btn-outline-secondary bg-primary button" type="button"
                                         id="button-addon2"><i class="fas fa-search"></i></button>
-                                </div>
-                            </div>
-
-                            <ul class="list-group">
-
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col mt-4 mr-5">
-                <div class="card currentCard pb-2 pt-1">
-                    <h5 class="card-title mt-2 text-center">Currently it is</h5>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col mt-4">
-                    <div class="card pb-5 fiveDayCard pl-5">
-                        <h5 class="card-title mt-2 mr-5">Over the next 5 days</h5>
-                        <div class="row">
-                            <div class="col fiveDayOne"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
+                                        -->
+                      
 
     <!--JavaScript/Other APIs used-->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" 

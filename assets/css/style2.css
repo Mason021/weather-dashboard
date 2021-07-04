@@ -2,13 +2,28 @@
     flex:auto;
 }
 
-.searchArea{
+.search-column{
     background-color: #f3f2f2;
 }
 
-.weatherItems{
+.list-group-item{
     line-height: 0.5;
     border: none;
 }
 
+span.favorable{
+    padding: 3px;
+    background-color: darkgreen;
+    color:white;
+}
 
+span.moderate{
+    padding: 3px;
+    background-color: yellow;
+}
+
+span.severe{
+    padding: 3px;
+    background-color: darkred;
+    color:white;
+}

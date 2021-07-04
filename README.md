@@ -2,15 +2,16 @@
 
 ## Weather outlook for multiple cities so that you can plan your trip accordingly
 
-<!-- ![image](https://user-images.githubusercontent.com/82064247/123525960-348e9800-d69a-11eb-800e-a6dd653f227f.png) -->
+![image](https://user-images.githubusercontent.com/82064247/124400577-2b7c7700-dce9-11eb-843a-2ce100485987.png)
 
 ## built with
 * HTML
 * CSS
 * JavaScript
+* 
 
 ## Website
-<!-- live link here -->
+https://mason021.github.io/weather-dashboard/
 
 ## contribution
 Made By Mason Cain

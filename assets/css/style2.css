@@ -1,16 +1,30 @@
+/* box custom color */
+.bg-dark{
+    background: linear-gradient(to right,#929292,#202020);
+}
+
+.bg-info{
+    background: linear-gradient(to right,#03b8c5,#017179)
+}
+
+.btn-info{
+    background: linear-gradient(to right,#03b8c5,#017179)
+}
+
+/* class stylings */
 .card-body{
     flex:auto;
 }
 
 .search-column{
-    background-color: #f3f2f2;
+    background-color: #ffffff;
 }
 
 .list-group-item{
     line-height: 0.5;
     border: none;
 }
-
+/* Spans */
 span.favorable{
     padding: 3px;
     background-color: darkgreen;
@@ -27,3 +41,5 @@ span.severe{
     background-color: darkred;
     color:white;
 }
+
+

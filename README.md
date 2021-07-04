@@ -8,7 +8,10 @@
 * HTML
 * CSS
 * JavaScript
-* 
+* Moment.js
+* Bootstrap
+* Open Weather API
+
 
 ## Website
 https://mason021.github.io/weather-dashboard/

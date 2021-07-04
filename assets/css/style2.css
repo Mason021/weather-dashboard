@@ -1,7 +1,14 @@
-
+.card-body{
+    flex:auto;
+}
 
 .searchArea{
-    background-color: #c4c4c4
+    background-color: #f3f2f2;
+}
+
+.weatherItems{
+    line-height: 0.5;
+    border: none;
 }
 
 

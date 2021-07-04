@@ -78,10 +78,35 @@ var showWeather = function(weather, cityToLookFor){
     // Humidity Span //
     var howHumid = document.createElement("span");
     howHumid.textContent = "Humidity:" + weather.main.humidity + " %";
+    howHumid.classList = "weatherItems"
     // connecting to their containers //
-    
+    currentWeatherHolderEl.appendChild(windMPH);
+    currentWeatherHolderEl.appendChild(temperatureData);
+    currentWeatherHolderEl.appendChild(howHumid);
 
+    var longitude = weather.coord.lon;
+    var latitude = weather.coord.lat;
+    UvIndex(latitude, longitude)
+}
 
+var UvIndex = function(latitude, longitude){
+    var keyOfAPI = 'cbc3e876c3052d94c4bb2fd2f431468b'
+    var apiURL = `https://api.openweathermap.org/data/2.5/uvi?appid=${keyOfAPI}&lat=${latitude}&lon=${longitude}`
+    fetch(keyOfAPI)
+    .then(function(response){
+        response.json().then(function(data){
+            showUvIndex(data)
+        });     
+    });
+}
+
+var showUvIndex= function(index){
+    var showUvIndexEl= document.createElement("div");
+    showUvIndexEl.textContent = "UV Index:"
+    showUvIndexEl.classList= "weatherItems"
+
+    valueOfUvIndex = document.createElement("span")
+    valueOfUvIndex.textContent = index.value
 }
 
 

@@ -75,7 +75,7 @@ var showWeather = function (weather, cityToLookFor) {
     lookedUpCityEl.appendChild(dateOnCalander);
     // Wind Span //
     var windMPH = document.createElement("span");
-    windMPH.textContent = "Speed of Wind: " + weather.wind.speed + "MPH";
+    windMPH.textContent = "Wind Speed: " + weather.wind.speed + " MPH";
     windMPH.classList = "list-group-item"
     // Humidity Span //
     var howHumid = document.createElement("span");
@@ -174,7 +174,7 @@ var showFiveDay = function (weather) {
 
         var windMphEl = document.createElement("span")
         windMphEl.classList = "card-body text-center";
-        windMphEl.textContent = "Wind Speed: " + individualWeather.wind.speed + "MPH";
+        windMphEl.textContent = "Wind Speed: " + individualWeather.wind.speed + " MPH";
         weatherOutlookEl.appendChild(windMphEl);
 
         fiveDayWeatherHolderEl.appendChild(weatherOutlookEl);
